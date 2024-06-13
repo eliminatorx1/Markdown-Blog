@@ -14,13 +14,15 @@ body {
 /* styles/globals.css */
 
 .image-container {
-  margin-left: 50vh;
+  /* margin-left: auto; */
   width: 100vh;
   height: 25vh; /* 1/4th of the viewport height */
-  position: relative;
+  position: absolute;
+  border: 2px solid red;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  
 }
 
 .image {

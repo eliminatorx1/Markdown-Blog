@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
-import Home from "./page";
+// import Home from "./page";
+import Home from "@/components/HomeData";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -32,7 +33,7 @@ export default function RootLayout({
     </header>
   )
 
-  const footer = (
+  const Footer = (
     <footer>
       <div>
         <br/>
@@ -49,7 +50,8 @@ export default function RootLayout({
           src="/images/agl2.png" // Adjust the path to your image
           alt="Description of image"
           layout="fill" // Make the image fill the container
-          className="image"
+          // fill = {true}
+
         />
       </div>
       {/* Your other content goes here */}
@@ -64,9 +66,10 @@ export default function RootLayout({
       <body className={inter.className}>
         {header}
         {HomeImage}
-        
+        <Home>
+        </Home>
         {children}
-        {footer}
+       
         </body>
     </html>
   );
