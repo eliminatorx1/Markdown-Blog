@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import Link from "next/link";
+import Home from "./page";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +18,56 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const header = (
+    <header>
+      <div>
+        <Link href="/">
+          <h1>
+            Anuj's Blog
+          </h1>
+        </Link>
+        
+        <p>Welcome to my GSOC blog</p>
+      </div>
+    </header>
+  )
+
+  const footer = (
+    <footer>
+      <div>
+        <br/>
+        
+        <p>Developed by Anuj</p>
+      </div>
+    </footer>
+  )
+
+  const HomeImage = (
+    <div>
+      <div className="image-container">
+        <Image
+          src="/images/agl2.png" // Adjust the path to your image
+          alt="Description of image"
+          layout="fill" // Make the image fill the container
+          className="image"
+        />
+      </div>
+      {/* Your other content goes here */}
+    </div>
+  )
+
+
+
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {header}
+        {HomeImage}
+        
+        {children}
+        {footer}
+        </body>
     </html>
   );
 }
