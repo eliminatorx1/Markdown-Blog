@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 // import Home from "./page";
 import Home from "@/components/HomeData";
-
+import Sidebar from "@/components/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,29 +19,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const header = (
-    <header>
-      <div>
-        <Link href="/">
-          <h1>
-            Anuj's Blog
-          </h1>
-        </Link>
-        
-        <p>Welcome to my GSOC blog</p>
-      </div>
-    </header>
-  )
+  // const header = (
+    
+  // );
 
   const Footer = (
     <footer>
       <div>
-        <br/>
-        
+        <br />
+
         <p>Developed by Anuj</p>
       </div>
     </footer>
-  )
+  );
 
   const HomeImage = (
     <div>
@@ -51,26 +41,21 @@ export default function RootLayout({
           alt="Description of image"
           layout="fill" // Make the image fill the container
           // fill = {true}
-
         />
       </div>
       {/* Your other content goes here */}
     </div>
-  )
-
-
-
+  );
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        {header}
-        {HomeImage}
-        <Home>
-        </Home>
-        {children}
+          <Sidebar>
+           <div>{children}</div>
+          </Sidebar>
+            
        
-        </body>
+      </body>
     </html>
   );
 }

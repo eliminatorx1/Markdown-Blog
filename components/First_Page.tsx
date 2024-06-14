@@ -1,10 +1,6 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-
 import Link from "next/link";
+import fs from "fs";
+import matter from "gray-matter";
 import { PostMetadata } from "@/components/PostMetadata";
 
 const getPostMetadata = ():PostMetadata[]=>{
@@ -27,21 +23,4 @@ const getPostMetadata = ():PostMetadata[]=>{
 
 }
 
-
-export default function Home() {
-  const postMetadata = getPostMetadata();
-  const postPreviews = postMetadata.map((post)=>(
-    <button className="px-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-neutral-800 duration-300 ... w-full active:bg-transparent">
-      <Link href = {`/posts/${post.slug}`} >
-       <button className = "py-2 w-full  active:bg-neutral-700 focus:outline-none  focus:bg-neutral-700 ...">{post.title}</button>
-      </Link>
-      
-    </button>
-  ))
-
-  return <div>{postPreviews}</div>;
-    
-  
-}
-
-
+export default getPostMetadata;

@@ -1,31 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-
-
-body {
- 
-  font-family: 'Roboto', sans-serif;
-  background-color: #121212;
-  color: #e0e0e0;
-
-
+html,
+body,
+:root{
+  height: 100%;
+  background-color: black;
+  color-scheme: dark;
 }
-
-
-/* styles/globals.css */
-
-.image-container {
-  /* margin-left: auto; */
-  width: 100vh;
-  height: 25vh; /* 1/4th of the viewport height */
-  position: absolute;
-  border: 2px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-.image {
-  object-fit: cover; /* Ensure the image covers the entire container */
-}
-
