@@ -31,12 +31,12 @@ const getPostMetadata = ():PostMetadata[]=>{
 export default function Home() {
   const postMetadata = getPostMetadata();
   const postPreviews = postMetadata.map((post)=>(
-    <button className="px-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-neutral-800 duration-300 ... w-full active:bg-transparent">
+    <div className="px-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-neutral-800 duration-300 ... w-full active:bg-transparent">
       <Link href = {`/posts/${post.slug}`} >
        <button className = "py-2 w-full  active:bg-neutral-700 focus:outline-none  focus:bg-neutral-700 ...">{post.title}</button>
       </Link>
       
-    </button>
+    </div>
   ))
 
   return <div>{postPreviews}</div>;
