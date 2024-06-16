@@ -1,6 +1,5 @@
 ---
 title: "GSoc Community Bonding"
-
 ---
 
 

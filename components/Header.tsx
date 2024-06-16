@@ -7,10 +7,10 @@ const Header = () =>{
         <header>
       <div >
         <Link href="/">
-          <div className="text-xl">Anuj's Blog</div>
+          <div className="text-4xl py-4 px-5 text-sky-400">My Blogs 👋</div>
         </Link>
 
-        <p>Welcome to my GSOC blog</p>
+        <p className="px-4 py-4">Welcome to my GSOC blogs</p>
       </div>
      </header>
     )

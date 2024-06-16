@@ -50,7 +50,7 @@ interface HomeProps {
 const HomeContent = ({ latestPost }: HomeProps) => {
   return (
     <div className={styles.container}>
-      <h1>{latestPost.title}</h1>
+      <h1 >{latestPost.title}</h1>
       <p>{latestPost.date}</p>
       <div>{latestPost.content}</div>
       <Link href={`/posts/${latestPost.slug}`}>

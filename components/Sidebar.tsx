@@ -6,6 +6,7 @@ import Box from "./Box";
 import SidebarItem from "./SidebarItem";
 import HomeImage from "./HomeImage";
 import Header from "./Header";
+import { twMerge } from "tailwind-merge";
 
 interface sidebarProps{
     children: React.ReactNode;
@@ -51,15 +52,24 @@ const Sidebar:React.FC<sidebarProps> = ({
             
             <div className=" bg-neutral-900
                 rounded-lg
-               
-                my-3
-                px-3
+                
+                my-2
+                px-4
                 overflow-y-auto
                 h-full
                 w-full">
                     
-                
+            <div className="flex justify-center py-3 text-sl text-sky-400 font-bold">
+                <p>Anuj solanki</p>
+            </div> 
+            <div className="leading-7">
             {children}
+
+            </div>
+             
+             
+            
+           
             </div>
            </main>
 
