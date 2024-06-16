@@ -5,7 +5,7 @@ import Link from "next/link"
 const Header = () =>{
     return(
         <header>
-      <div >
+      <div>
         <Link href="/">
           <div className="text-4xl py-4 px-5 text-sky-400">My Blogs 👋</div>
         </Link>

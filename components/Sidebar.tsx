@@ -7,6 +7,7 @@ import SidebarItem from "./SidebarItem";
 import HomeImage from "./HomeImage";
 import Header from "./Header";
 import { twMerge } from "tailwind-merge";
+import Link from "next/link";
 
 interface sidebarProps{
     children: React.ReactNode;
@@ -60,7 +61,10 @@ const Sidebar:React.FC<sidebarProps> = ({
                 w-full">
                     
             <div className="flex justify-center py-3 text-sl text-sky-400 font-bold">
-                <p>Anuj solanki</p>
+               <Link href= '/'>
+                 <p>Anuj solanki</p>
+               </Link>
+               
             </div> 
             <div className="leading-7">
             {children}
