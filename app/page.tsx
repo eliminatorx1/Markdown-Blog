@@ -20,7 +20,8 @@ export default function HomePage() {
 
   ))
 
-  // return <div>{postPreviews}</div>;
+  return <div>{postPreviews}</div>;
+
     
   
 }
