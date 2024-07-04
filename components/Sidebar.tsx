@@ -62,7 +62,7 @@ const Sidebar:React.FC<sidebarProps> = ({
                     
             <div className="flex justify-center py-3 text-sl text-sky-400 font-bold">
                <Link href= '/'>
-                 <p>Anuj solanki</p>
+                 <p>Sandeep Singh</p>
                </Link>
                
             </div> 
